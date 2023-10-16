@@ -1,8 +1,18 @@
 // Child component `Square` can be passed a prop called `value`
 // from parent component `Board`
 function Square({value}) {
+  function handleClick() {
+    console.log('clicked!');
+  }
   console.log({value});
-  return <button className="square">{value}</button>;
+  return (
+    <button 
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
 
 export default function Board() {
